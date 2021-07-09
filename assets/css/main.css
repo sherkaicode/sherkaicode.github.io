@@ -36,7 +36,9 @@ body {
 ol, ul {
 	list-style: none;
 }
-
+#Profile {
+	border-radius: 50%;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -3327,3 +3329,4 @@ input, select, textarea {
 			}
 
 		}
+		
