@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>francis jumawan</title>
+  <link rel="icon" type="image/x-icon" href="/Images/IMG_20240728_compressed.png">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
     }
 
     header {
-      background-color: #f0f0f0;
+      background-color: #1f1f1f;
       padding: 1rem;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     nav {
@@ -25,14 +31,15 @@
 
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #e0e0e0;
       padding: 0.5rem 1rem;
       border-radius: 5px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #ddd;
+      background-color: #333;
+      color: #fff;
     }
 
     main {
@@ -44,7 +51,7 @@
     }
 
     h2 {
-      color: #333;
+      color: #ffcc00;
     }
 
     p {
@@ -64,16 +71,40 @@
       border-radius: 50%;
       object-fit: cover;
       margin-right: 2rem;
+      border: 3px solid #ffcc00;
     }
 
     .profile-info {
       text-align: left;
     }
+
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: #ffc107;
+    }
+
+    .contact-link i {
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Personal Website</h1>
     <nav>
       <a href="home.html">Home</a>
       <a href="Headers/bio.html">Bio</a>
@@ -86,28 +117,37 @@
   <main>
     <section id="welcome">
       <div class="profile-container">
-        <img src="Images/IMG_20240728_compressed.png" alt="Your Profile Picture" class="profile-image">
+        <img src="./Images/PLR.jpg" alt="Your Profile Picture" class="profile-image">
         <div class="profile-info">
-          <h2> Welcome!</h2>
-          <p> asdasdasda</p>
+          <h2>Keep Moving Forward</h2>
+          <p>Cornelius Robinsons (Lewis)</p>
         </div>
       </div>
     </section>
 
     <section id="about">
       <h2>About Me</h2>
-      <p> I am Francis Lance T. Jumawan a III-BS Physics student in UP Diliman National Institute of Physics.</p>
+      <p>Hi! I am Francis Lance T. Jumawan, a III-BS Physics student in UP Diliman National Institute of Physics. I am also currently an apprentice in the High Energy Physics and Phenomenology (HepPh) Subgroup of Gravity, Astronomoy, Nuclear, and Particle Physics (GANAP) Group.
+      </p>
+      <br>
+      <p> Currently, I am exploring Monte Carlo simulations in Particle Physics such as PYTHIA and MagGraph for my apprenticeship. </p>
     </section>
 
+    <!-- Contact Me Section with Dark Theme -->
     <section id="contact">
       <h2>Contact Me</h2>
       <p>If you'd like to get in touch, you can reach me through the following channels:</p>
-      <ul>
-        <li>Email: fljumawan@gmail.com</li>
-        <li>LinkedIn: https://www.linkedin.com/in/francis-lance-jumawan/</li>
-        <li>GitHub: https://github.com/sherkaicode</li>
-        <!-- Add other contact methods as needed -->
-      </ul>
+      <div class="contact-links">
+        <a href="mailto:ftjumawan@up.edu.ph" class="contact-link">
+          <i class="fas fa-envelope"></i> ftjumawan@up.edu.ph
+        </a>
+        <a href="https://www.linkedin.com/in/francis-lance-jumawan/" target="_blank" class="contact-link">
+          <i class="fab fa-linkedin"></i> francis-lance-jumawan
+        </a>
+        <a href="https://github.com/sherkaicode" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i> sherkaicode
+        </a>
+      </div>
     </section>
   </main>
 </body>
