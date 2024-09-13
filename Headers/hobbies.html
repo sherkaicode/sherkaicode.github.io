@@ -6,7 +6,7 @@
   <title>My Hobbies</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #121212;
@@ -41,36 +41,57 @@
 
     main {
       padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
     h2 {
       color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
     }
 
     p {
       line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 2rem;
     }
+
     .hobby-section {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      background-color: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hobby-section:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
     .hobby-image {
       width: 200px;
       height: 200px;
-      border-radius: 5px;
+      border-radius: 10px;
       object-fit: cover;
-      margin-right: 2rem;
+      border: 3px solid #ffcc00;
     }
 
     .hobby-description {
+      max-width: 60%;
       text-align: left;
+    }
+
+    .hobby-description h3 {
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -88,33 +109,48 @@
   <main>
     <section id="hobbies">
       <h2>My Hobbies</h2>
-      <p>Here are some of the things I enjoy doing in my free time:</p>
+      <p style="text-align: center">Here are some of the things I enjoy doing in my free time:</p>
 
       <div class="hobby-section">
-        <img src="hobby1-image.jpg" alt="Hobby 1" class="hobby-image">
+        <img src="../Images/EM.JPG" alt="Photography" class="hobby-image">
         <div class="hobby-description">
-          <h3>Hobby 1</h3>
-          <p>A brief description of your first hobby, explaining why you enjoy it and what you do.</p>
+          <h3>Photography</h3>
+          <p>I love capturing moments through the lens. Especially if it's landscapes or candid shots, photography allows me to express my creativity and see the world from different perspectives. 
+            I also enjoy capturing the moments. Since time only moves forward, each and every experince occurs only once that is why each photo is special.
+          </p>
         </div>
       </div>
 
       <div class="hobby-section">
-        <img src="hobby2-image.jpg" alt="Hobby 2" class="hobby-image">
+        <img src="../Images/Onepiece.jpg" alt="Anime and Manga" class="hobby-image">
         <div class="hobby-description">
-          <h3>Hobby 2</h3>
-          <p>A brief description of your second hobby, explaining why you enjoy it and what you do.</p>
+          <h3>Anime and Manga</h3>
+          <p>Anime and Manga have been a significant part of my life, offering unique storytelling, and memorable characters. I enjoy exploring different genres and diving into complex narratives that these mediums provide.
+            My favorites includes plots that have good twist and have very deep meaning. Each and every anime or manga provides me a set of new perspective and entertainment at the same time. 
+          </p>
         </div>
       </div>
 
       <div class="hobby-section">
-        <img src="hobby3-image.jpg" alt="Hobby 3" class="hobby-image">
+        <img src="../Images/Studioghible.jpg" alt="Studio Ghibli Movies" class="hobby-image">
         <div class="hobby-description">
-          <h3>Hobby 3</h3>
-          <p>A brief description of your third hobby, explaining why you enjoy it and what you do.</p>
+          <h3>Studio Ghibli Movies</h3>
+          <p>The magic of Studio Ghibli films, from the stunning animation to the heartfelt stories, never fails to captivate me. These movies are a beautiful escape into worlds of wonder, kindness, and timeless lessons. 
+            It is my comfort movie to watch.
+          </p>
         </div>
       </div>
 
-      <!-- Add more hobby sections as needed -->
+      <div class="hobby-section">
+        <img src="../Images/Ironman.jpg" alt="Marvel Cinematic Universe Movies" class="hobby-image">
+        <div class="hobby-description">
+          <h3>Marvel Cinematic Universe Movies</h3>
+          <p>I'm a big fan of the Marvel Cinematic Universe. The thrilling action, character development, and interconnected stories keep me engaged, whether it's the latest blockbuster or revisiting old favorites.
+            The movies here inspires me in my pursuit in physics because of the very realistic CGI of the movies.
+          </p>
+        </div>
+      </div>
+
     </section>
   </main>
 </body>
