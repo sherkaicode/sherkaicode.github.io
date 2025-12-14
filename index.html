@@ -1,154 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>francis jumawan</title>
-  <link rel="icon" type="image/x-icon" href="/Images/IMG_20240728_compressed.png">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    header {
-      background-color: #1f1f1f;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #e0e0e0;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      color: #ffcc00;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .profile-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .profile-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 2rem;
-      border: 3px solid #ffcc00;
-    }
-
-    .profile-info {
-      text-align: left;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #e0e0e0;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .contact-link:hover {
-      color: #ffc107;
-    }
-
-    .contact-link i {
-      font-size: 1.2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+
+<header>
+    <h1>Welcome to My Website</h1>
     <nav>
-      <a href="home.html">Home</a>
-      <a href="Headers/bio.html">Bio</a>
-      <a href="Headers/hobbies.html">Hobbies</a>
-      <a href="Headers/blog.html">Blog</a>
-      <a href="Headers/research.html">Research</a>
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="research.html">Research</a>
+        <a href="hobbies/chess.html">Chess</a>
+        <a href="hobbies/anime.html">Anime</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section id="welcome">
-      <div class="profile-container">
-        <img src="./Images/PLR.jpg" alt="Your Profile Picture" class="profile-image">
-        <div class="profile-info">
-          <h2>Keep Moving Forward</h2>
-          <p>Cornelius Robinsons (Lewis)</p>
-        </div>
-      </div>
-    </section>
+<div class="container">
+    <h2>Hello!</h2>
+    <p>Welcome to my personal corner of the internet. Here I discuss my research, share my chess games, and review my favorite media.</p>
+</div>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi! I am Francis Lance T. Jumawan, a III-BS Physics student in UP Diliman National Institute of Physics. I am also currently an apprentice in the High Energy Physics and Phenomenology (HepPh) Subgroup of Gravity, Astronomoy, Nuclear, and Particle Physics (GANAP) Group.
-      </p>
-      <br>
-      <p> Currently, I am exploring Monte Carlo simulations in Particle Physics such as PYTHIA and MagGraph for my apprenticeship. </p>
-    </section>
-
-    <!-- Contact Me Section with Dark Theme -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, you can reach me through the following channels:</p>
-      <div class="contact-links">
-        <a href="mailto:ftjumawan@up.edu.ph" class="contact-link">
-          <i class="fas fa-envelope"></i> ftjumawan@up.edu.ph
-        </a>
-        <a href="https://www.linkedin.com/in/francis-lance-jumawan/" target="_blank" class="contact-link">
-          <i class="fab fa-linkedin"></i> francis-lance-jumawan
-        </a>
-        <a href="https://github.com/sherkaicode" target="_blank" class="contact-link">
-          <i class="fab fa-github"></i> sherkaicode
-        </a>
-      </div>
-    </section>
-  </main>
 </body>
 </html>
