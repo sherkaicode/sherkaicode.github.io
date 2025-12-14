@@ -1,45 +1,119 @@
-/* style.css */
+/* --- CSS Variables based on the reference image --- */
+:root {
+    /* Deep, moody blues/greys from the sky background */
+    --bg-main: #2b3240; 
+    --bg-secondary: #364152; /* Slightly lighter for the header */
+    
+    /* Text colors */
+    --text-light: #e6edf5; /* Off-white for general text */
+    /* The golden yellow from the text and boots in the image */
+    --text-accent: #f2c94c; 
+}
+
+/* --- General Reset & Typography --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover { text-decoration: underline; }
-
+/* A reusable container to keep content centered nicely on the screen */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Database Card Styling */
-.card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background-color: #fff;
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
 }
-.card h3 { margin-top: 0; color: #2c3e50; }
-.rating { color: #f39c12; font-weight: bold; }
-img.gallery-img { max-width: 100%; border-radius: 5px; }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Hidden underline */
+}
+
+/* Hover state AND the active state use the golden accent color */
+.nav-link:hover, .nav-link.active {
+    color: var(--text-accent);
+    border-bottom: 2px solid var(--text-accent);
+}
+
+/* --- Hero Section (The main welcome area) --- */
+.hero-section {
+    /* Makes the section tall and centers content vertically */
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* A subtle gradient to give the dark background more depth, like the painted sky */
+    background: linear-gradient(135deg, var(--bg-main) 0%, #1e2430 100%);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    /* Using the golden accent for the main header */
+    color: var(--text-accent);
+}
+
+/* Styling specifically for the quote from the image */
+.accent-text {
+    font-family: cursive; /* A simple handwritten style font */
+    color: var(--text-accent);
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.hero-text p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #bdc7d6; /* Slightly dimmer text for the paragraph description */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--bg-secondary);
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    font-size: 0.8rem;
+    opacity: 0.6;
+}

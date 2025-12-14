@@ -2,26 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="bio.html">Bio</a>
-        <a href="research.html">Research</a>
-        <a href="hobbies/chess.html">Chess</a>
-        <a href="hobbies/anime.html">Anime</a>
-    </nav>
-</header>
+    <header>
+        <div class="container header-content">
+            <div class="logo">My Portfolio</div>
+            <nav>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="bio.html" class="nav-link">Bio</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="container">
-    <h2>Hello!</h2>
-    <p>Welcome to my personal corner of the internet. Here I discuss my research, share my chess games, and review my favorite media.</p>
-</div>
+    <main class="hero-section">
+        <div class="container hero-text">
+            <h1>Hello.</h1>
+            <p class="accent-text">"under the rain with you"</p>
+            <p>Welcome to my personal corner of the internet. Feel free to explore my research, read my bio, or check out my hobby gallery.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 My Portfolio</p>
+    </footer>
 
 </body>
 </html>
