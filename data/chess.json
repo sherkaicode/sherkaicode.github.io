@@ -1,0 +1,30 @@
+[
+    {
+        "id": 4,
+        "title": "First time smothered mate!!",
+        "date": "December 15, 2025",
+        "content": "Smothered mate :))",
+        "image_url": "images/chess-first-time-smothered-mate.png"
+    },
+    {
+        "id": 3,
+        "title": "New Brilliant Move!",
+        "date": "December 15, 2025",
+        "content": "Wow",
+        "image_url": "images/chess-new-brilliant-move.png"
+    },
+    {
+        "id": 2,
+        "title": "Another Brilliant!",
+        "date": "December 15, 2025",
+        "content": "Another random brilliant move!",
+        "image_url": "images/chess-another-brilliant.png"
+    },
+    {
+        "id": 1,
+        "title": "Brilliant Move",
+        "date": "December 15, 2025",
+        "content": "Amazing Feeling",
+        "image_url": "images/chess-brilliant-move.jpeg"
+    }
+]

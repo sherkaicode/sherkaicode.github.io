@@ -1,0 +1,72 @@
+[
+  {
+    "title": "One Piece",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/One Piece.jpg",
+    "description": "This is my favorite anime of all time. While the battle has some armor plot so it is not that exciting, the plot is so amazing. I imagine a lot of theories in my head. This story building has so many potential"
+  },
+  {
+    "title": "Naruto",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/Naruto.jpg",
+    "description": "This is a classic anime. It has a lot of redundant backstory but the fight, the plot, and the essence of the power are good. It has good backstory and lesson to learn"
+  },
+  {
+    "title": "HunterXHunter",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/HxH.jpg",
+    "description": "This anime wins it when it comes to power scaling. It explains very good on how the powers are earned and how to improve them and there is not random power up. It taught me how to appreciate friends."
+  },
+  {
+    "title": "Fairy Tail",
+    "type": "Anime",
+    "rating": 4,
+    "cover_url": "images/FairyTail.jpg",
+    "description": "The anime is good and the lore of the dragons are amazing. But is has some power of friendship thing and gets some random power up. In addition, the main characters has some really unfair advantage"
+  },
+  {
+    "title": "Death Note",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/Death Note.jpg",
+    "description": "It is an amazing piece of literature. Light who has been given the power of God and has the ability to punish humans himself shows that regardless of intent, humans are still humans. Give it power and it will change (That's why superman is unlikely). While L, a mere human aiming to prove the God exist in the first place. I am a sucker for detective animes"
+  },
+  {
+    "title": "Moriarty the Patriot",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/MnP.jpg",
+    "description": "It is inspired from the classic Sherlock Holmes. This is a story of Moriarty (the bad guy supposedly) but now is a good guy. It is interesting since it shows that at the era of sherlock holmes where people with money are corrupt (until now), like monarchs and stuff, shows a resistance from the poor"
+  },
+  {
+    "title": "Rurouni Kenshin",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/RurouniKenshin.jpg",
+    "description": "A classic anime back in the day. It has very good fighting scens are a very epic story. Though in this anime, it showed me something really cool. There was one part where there is a very good healer that was revered as holy (much same as Jesus), which made me look into Theology a bit in High School"
+  },
+  {
+    "title": "Detective Conan",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/DC.jpg",
+    "description": "This is the anime I grew up with. Until now it is not finished. Even though the plot is very reapeting since it was designed for a TV show. I still enjoy it, especially the canon events, the cross over with kaito kid"
+  },
+  {
+    "title": "Kowloon Generic Romance",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/Kowloon.jpg",
+    "description": "This anime is so great. One of the best. I have trouble understanding it until know. The plot is very intersting and very mysterious. Plus the romance tickled something in me"
+  },
+  {
+    "title": "Psycho-Pass",
+    "type": "Anime",
+    "rating": 5,
+    "cover_url": "images/PsychoPAss.jpg",
+    "description": "This is a very good anime. It basically asks the question, do you kill the person before it commits the crime knowing you know that it has a high probability of doing so? or would you wait if that person did the crime before acting?"
+  }
+]

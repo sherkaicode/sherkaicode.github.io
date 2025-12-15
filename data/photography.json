@@ -1,0 +1,74 @@
+[
+    {
+        "id": 9,
+        "url": "images/helios-set.png",
+        "title": "Helios Set",
+        "location": "Binuni, Bacolod, Lanao del Norte (Home)",
+        "description": "The sunset I always admired when I am at home. This pretty much a daily occurence but still amaze me everytime",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 8,
+        "url": "images/wild-blue.png",
+        "title": "Wild Blue",
+        "location": "Cavite, Philippines",
+        "description": "This is the husky of my cousin named Amihan. It has a pretty blue eyes at it just looks cool",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 7,
+        "url": "images/the-foundation-of-the-future.png",
+        "title": "The Foundation of the Future",
+        "location": "Philippines",
+        "description": "The rocks shows the \"building of something\" and it reminds me that the new generation are the foundation of the future",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 6,
+        "url": "images/sunny-butterfly.png",
+        "title": "Sunny Butterfly",
+        "location": "Mount Saleve, France",
+        "description": "It was my first legit hiking experience in life. This butterfly sealed the deal that it was worth doing it again",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 5,
+        "url": "images/close-up.png",
+        "title": "Close Up",
+        "location": "Zurich Lake, Switzerland",
+        "description": "I borrowed the very expensive camera of my friend David from Germany",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 4,
+        "url": "images/after-rain.png",
+        "title": "After Rain",
+        "location": "National Institute of Physics",
+        "description": "This scenery is new since I usually leave the laboratory at dark (~6PM)",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 3,
+        "url": "images/whispers-of-rain.png",
+        "title": "Whispers of Rain",
+        "location": "Grindelwald, Switzerland",
+        "description": "A color blue and pink raincoat has a special memory from me. It is something that I treasure",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 2,
+        "url": "images/em.jpg",
+        "title": "Electromagnetic Spectrum",
+        "location": "Home",
+        "description": "This is the first photography competition I joined and won 4th place :))",
+        "date_added": "2025-12-15"
+    },
+    {
+        "id": 1,
+        "url": "images/cat.jpeg",
+        "title": "Cat",
+        "location": "UPTC",
+        "description": "Sleeping Cat in the City",
+        "date_added": "2025-12-15"
+    }
+]

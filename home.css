@@ -1,0 +1,44 @@
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-main) 0%, #1e2430 100%);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--text-accent);
+}
+
+.accent-text {
+    font-family: cursive;
+    color: var(--text-accent);
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.hero-text p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #bdc7d6;
+}
+
+/* Intro Paragraph specific to home */
+.intro-blurb {
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    font-size: 1rem;
+    color: #bdc7d6;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    margin-bottom: 30px;
+}

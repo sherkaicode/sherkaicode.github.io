@@ -1,0 +1,192 @@
+/* --- Research Layout --- */
+.research-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.research-main {
+    flex: 2;
+}
+
+.research-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+/* Research Cards */
+.research-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+}
+
+.research-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--text-accent);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #bdc7d6;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.publisher {
+    font-weight: 700;
+    color: var(--text-accent);
+}
+
+.research-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
+}
+
+.research-card h3 a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+.research-card h3 a:hover {
+    color: var(--text-accent);
+}
+
+.tags {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(242, 201, 76, 0.1);
+    color: var(--text-accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.description {
+    color: #bdc7d6;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--text-accent);
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.read-more:hover {
+    color: var(--text-accent);
+    padding-bottom: 5px;
+}
+
+/* Sidebar & Skills */
+.sidebar-box {
+    background-color: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-box h3 {
+    color: var(--text-accent);
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    font-size: 0.85rem;
+    color: #bdc7d6;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-bar .fill {
+    height: 100%;
+    background-color: var(--text-accent);
+    border-radius: 3px;
+}
+
+/* Talks List */
+.talks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.talks-list li {
+    margin-bottom: 15px;
+    border-left: 2px solid var(--text-accent);
+    padding-left: 10px;
+}
+
+.talks-list strong {
+    color: var(--text-light);
+    display: block;
+    font-size: 0.95rem;
+}
+
+.talk-detail {
+    font-size: 0.85rem;
+    color: #bdc7d6;
+}
+
+.talk-detail-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: #8b9bb4;
+    margin-top: 4px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .research-layout {
+        flex-direction: column;
+    }
+    
+    .research-sidebar {
+        position: static;
+        width: 100%;
+    }
+}

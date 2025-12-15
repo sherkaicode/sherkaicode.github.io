@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/fav_img.png">
+    <title>My Hobbies & Interests | Wan's Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="hobbies.css">
+    
+    <style>
+        /* Chess CSS embedded for layout */
+        .chess-blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+        .blog-post {
+            background-color: var(--bg-secondary); 
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: row;
+            align-items: stretch;
+            min-height: 220px;
+            cursor: pointer;
+        }
+        .blog-post:hover {
+            transform: translateY(-3px);
+            border-color: var(--text-accent);
+        }
+        .post-text-content {
+            flex: 1; 
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+        }
+        .blog-header {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+        .blog-title {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-accent); 
+            font-style: italic;
+        }
+        .blog-content-preview {
+            color: #bdc7d6;
+            line-height: 1.6;
+            font-size: 1rem;
+            white-space: pre-wrap;
+            max-height: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5; 
+            -webkit-box-orient: vertical;
+        }
+        .blog-image {
+            width: 40%; 
+            max-width: 350px;
+            object-fit: cover; 
+            border-left: 1px solid rgba(255,255,255,0.1);
+            display: block;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .blog-post { flex-direction: column-reverse; height: auto; }
+            .blog-image { width: 100%; max-width: 100%; height: 200px; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"> <img src="images/logo.png" alt="My Logo" style="height: 60px; vertical-align: middle;"> </div>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="bio.html" class="nav-link">Bio</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="hobbies.html" class="nav-link active">Hobbies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1 class="page-title" style="text-align: center;">Interests & Gallery</h1>
+            <p class="intro-blurb" style="text-align: center;">
+                When I'm not in the lab or coding, I explore the world through a lens, analyze chess positions, and enjoy cinema.
+            </p>
+
+            <div class="hobby-controls">
+                <button class="filter-btn active" onclick="filterSelection('photography')">Photography</button>
+                <button class="filter-btn" onclick="filterSelection('chess')">Chess</button>
+                <button class="filter-btn" onclick="filterSelection('anime')">Anime & Manga</button>
+                <button class="filter-btn" onclick="filterSelection('movies')">Movies</button>
+            </div>
+
+            <div id="photography" class="gallery-grid photo-mode">
+                <p style="color: #bdc7d6; text-align: center; width: 100%; grid-column: 1 / -1;">Loading gallery...</p>
+            </div>
+
+            <div id="chess" class="chess-blog-container" style="display: none;">
+               <p style="color: #bdc7d6; text-align: center;">Loading chess updates...</p>
+            </div>
+
+            <div id="anime" class="gallery-grid anime-mode" style="display: none;">
+                <p style="color: #bdc7d6; text-align: center; width: 100%; grid-column: 1 / -1;">Loading collection...</p>
+            </div>
+
+            <div id="movies" class="gallery-grid anime-mode" style="display: none;">
+                <p style="color: #bdc7d6; text-align: center; width: 100%; grid-column: 1 / -1;">Loading movies...</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Francis Lance Jumawan</p>
+        </div>
+    </footer>
+
+    <div id="photoModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modal-title">Title</h2>
+                <div class="modal-meta">
+                    <span id="modal-loc"></span> </div>
+                <p id="modal-desc">Description goes here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPhotography();
+            loadChess(); 
+            loadAnime(); 
+            loadMovies(); // Initialize Movies
+        });
+
+        // --- 1. Load Photography ---
+        function loadPhotography() {
+            fetch('data/photography.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('photography');
+                    container.innerHTML = ''; 
+                    data.forEach(photo => {
+                        const card = document.createElement('div');
+                        card.className = 'photo-card';
+                        card.setAttribute('data-title', photo.title);
+                        card.setAttribute('data-loc', photo.location);
+                        card.setAttribute('data-desc', photo.description);
+
+                        card.innerHTML = `
+                            <div class="image-wrapper"><img src="${photo.url}" alt="${photo.title}"></div>
+                            <div class="photo-info">
+                                <span class="photo-title">${photo.title}</span>
+                                <span class="photo-location"><i class="fas fa-map-marker-alt"></i> ${photo.location}</span>
+                            </div>`;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(err => console.error(err));
+        }
+
+        // --- 2. Load Chess ---
+        function loadChess() {
+            fetch('data/chess.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('chess');
+                    container.innerHTML = ''; 
+                    if(data.length === 0) {
+                        container.innerHTML = '<p style="text-align:center; color:#888;">No posts yet.</p>';
+                        return;
+                    }
+                    data.forEach(post => {
+                        const article = document.createElement('article');
+                        article.className = 'blog-post';
+                        article.setAttribute('data-title', post.title);
+                        article.setAttribute('data-date', post.date);
+                        if(post.image_url) article.setAttribute('data-img', post.image_url);
+
+                        let imageHTML = post.image_url ? `<img src="${post.image_url}" class="blog-image" alt="${post.title}">` : '';
+
+                        article.innerHTML = `
+                            <div class="post-text-content">
+                                <div class="blog-header">
+                                    <h3 class="blog-title">${post.title}</h3>
+                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+                                </div>
+                                <div class="blog-content-preview">${post.content}</div>
+                            </div>
+                            ${imageHTML}
+                        `;
+                        container.appendChild(article);
+                    });
+                })
+                .catch(err => console.error(err));
+        }
+
+        // --- 3. Load Anime ---
+        function loadAnime() {
+            fetch('data/anime.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('anime');
+                    container.innerHTML = '';
+                    if(data.length === 0) {
+                        container.innerHTML = '<p style="text-align:center; color:#888;">No entries yet.</p>';
+                        return;
+                    }
+
+                    data.forEach(item => {
+                        let stars = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
+
+                        // We use 'anime-card' class for styling
+                        const card = document.createElement('div');
+                        card.className = 'anime-card';
+                        
+                        card.setAttribute('data-title', item.title);
+                        card.setAttribute('data-type', item.type);
+                        card.setAttribute('data-stars', stars);
+                        card.setAttribute('data-desc', item.description);
+                        card.setAttribute('data-img', item.cover_url);
+
+                        card.innerHTML = `
+                            <div class="poster-wrapper">
+                                <img src="${item.cover_url}" alt="${item.title}">
+                            </div>
+                            <div class="anime-info">
+                                <div class="anime-title">${item.title}</div>
+                                <div class="anime-meta">
+                                    <span class="type-badge ${item.type.toLowerCase()}">${item.type}</span>
+                                    <span class="star-rating">${stars}</span>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(err => console.error(err));
+        }
+
+        // --- 4. Load Movies (NEW) ---
+        function loadMovies() {
+            fetch('data/movies.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('movies');
+                    container.innerHTML = '';
+                    if(data.length === 0) {
+                        container.innerHTML = '<p style="text-align:center; color:#888;">No movies yet.</p>';
+                        return;
+                    }
+
+                    data.forEach(item => {
+                        let stars = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
+
+                        // Reuse 'anime-card' class for consistent poster layout
+                        const card = document.createElement('div');
+                        card.className = 'anime-card movie-card'; // Added movie-card for specificity if needed
+                        
+                        card.setAttribute('data-title', item.title);
+                        card.setAttribute('data-genre', item.genre);
+                        card.setAttribute('data-stars', stars);
+                        card.setAttribute('data-desc', item.description);
+                        card.setAttribute('data-img', item.cover_url);
+
+                        card.innerHTML = `
+                            <div class="poster-wrapper">
+                                <img src="${item.cover_url}" alt="${item.title}">
+                            </div>
+                            <div class="anime-info">
+                                <div class="anime-title">${item.title}</div>
+                                <div class="anime-meta">
+                                    <span class="type-badge genre">${item.genre}</span>
+                                    <span class="star-rating">${stars}</span>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(err => {
+                    console.error('Error loading movies:', err);
+                    document.getElementById('movies').innerHTML = '<p style="text-align:center;">Failed to load data.</p>';
+                });
+        }
+
+        // --- 5. Filter Logic ---
+        function filterSelection(category) {
+            document.getElementById('photography').style.display = 'none';
+            document.getElementById('chess').style.display = 'none';
+            document.getElementById('anime').style.display = 'none';
+            document.getElementById('movies').style.display = 'none';
+
+            const element = document.getElementById(category);
+            if(element) {
+                if(category === 'chess') {
+                    element.style.display = 'flex'; 
+                } else {
+                    element.style.display = 'grid'; 
+                }
+            }
+
+            var buttons = document.getElementsByClassName("filter-btn");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+                if (buttons[i].textContent.toLowerCase().includes(category)) {
+                    buttons[i].classList.add("active");
+                }
+            }
+        }
+
+        // --- 6. Modal Logic ---
+        const modal = document.getElementById("photoModal");
+        const modalImg = document.getElementById("modal-img");
+        const modalTitle = document.getElementById("modal-title");
+        const modalLoc = document.getElementById("modal-loc");
+        const modalDesc = document.getElementById("modal-desc");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // A. Photography Click
+        document.getElementById('photography').addEventListener('click', function(e) {
+            const card = e.target.closest('.photo-card');
+            if (card) {
+                modalImg.style.display = 'block'; 
+                modalImg.src = card.querySelector('img').src;
+                modalTitle.textContent = card.getAttribute('data-title');
+                modalLoc.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${card.getAttribute('data-loc')}`;
+                modalDesc.textContent = card.getAttribute('data-desc');
+                modal.classList.add('show');
+            }
+        });
+
+        // B. Chess Click
+        document.getElementById('chess').addEventListener('click', function(e) {
+            const card = e.target.closest('.blog-post');
+            if (card) {
+                const imgUrl = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                const date = card.getAttribute('data-date');
+                const content = card.querySelector('.blog-content-preview').innerText;
+
+                modalTitle.textContent = title;
+                modalLoc.innerHTML = `<i class="far fa-calendar-alt"></i> ${date}`;
+                modalDesc.textContent = content; 
+
+                if (imgUrl) {
+                    modalImg.src = imgUrl;
+                    modalImg.style.display = 'block';
+                } else {
+                    modalImg.style.display = 'none';
+                    modalImg.src = ''; 
+                }
+                modal.classList.add('show');
+            }
+        });
+
+        // C. Anime Click
+        document.getElementById('anime').addEventListener('click', function(e) {
+            const card = e.target.closest('.anime-card');
+            if (card) {
+                const imgUrl = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                const type = card.getAttribute('data-type');
+                const stars = card.getAttribute('data-stars');
+                const desc = card.getAttribute('data-desc');
+
+                modalImg.src = imgUrl;
+                modalImg.style.display = 'block';
+                modalTitle.textContent = title;
+                modalLoc.innerHTML = `<span class="type-badge ${type.toLowerCase()}">${type}</span> <span style="margin-left:10px; color:#f1c40f;">${stars}</span>`;
+                modalDesc.textContent = desc;
+                modal.classList.add('show');
+            }
+        });
+
+        // D. Movies Click (NEW)
+        document.getElementById('movies').addEventListener('click', function(e) {
+            const card = e.target.closest('.movie-card');
+            if (card) {
+                const imgUrl = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                const genre = card.getAttribute('data-genre');
+                const stars = card.getAttribute('data-stars');
+                const desc = card.getAttribute('data-desc');
+
+                modalImg.src = imgUrl;
+                modalImg.style.display = 'block';
+                modalTitle.textContent = title;
+                // Reuse Genre badge style
+                modalLoc.innerHTML = `<span class="type-badge genre">${genre}</span> <span style="margin-left:10px; color:#f1c40f;">${stars}</span>`;
+                modalDesc.textContent = desc;
+                modal.classList.add('show');
+            }
+        });
+
+        closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+        window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('show'); });
+    </script>
+</body>
+</html>

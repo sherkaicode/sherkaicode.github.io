@@ -117,3 +117,656 @@ footer {
     font-size: 0.8rem;
     opacity: 0.6;
 }
+
+/* --- Add this to the bottom of style.css --- */
+
+/* Subtitle Styling */
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Intro Paragraph */
+.intro-blurb {
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    font-size: 1rem;
+    color: #bdc7d6; /* Slightly muted text */
+    line-height: 1.8;
+}
+
+/* Button Container */
+.cta-buttons {
+    margin-bottom: 30px;
+}
+
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Primary Button (Gold Background) */
+.btn.primary {
+    background-color: var(--text-accent); 
+    color: var(--bg-main); /* Dark text for contrast */
+}
+
+.btn.primary:hover {
+    background-color: #fff; /* White on hover */
+    transform: translateY(-2px);
+}
+
+/* Secondary Button (Transparent with Outline) */
+.btn.secondary {
+    border-color: var(--text-light);
+    color: var(--text-light);
+    background: transparent;
+}
+
+.btn.secondary:hover {
+    border-color: var(--text-accent);
+    color: var(--text-accent);
+}
+
+/* Social Icons Area */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.8rem; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--text-accent); /* Gold on hover */
+    transform: scale(1.1); /* Slight grow effect */
+}
+
+/* --- BIO PAGE STYLES --- */
+
+/* Wrapper for non-hero pages to add top spacing */
+.page-content {
+    padding: 60px 0;
+    min-height: 60vh;
+}
+
+/* Flex container to hold Sidebar (Image) and Article (Text) */
+.bio-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start; /* Aligns items to top */
+}
+
+/* 1. Left Sidebar Styling */
+.bio-sidebar {
+    flex: 1; /* Takes up 1 part of space */
+    max-width: 300px;
+    text-align: center;
+}
+
+.profile-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden;
+    border: 4px solid var(--text-accent); /* Golden border */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the circle without stretching */
+}
+
+.bio-stats h3 {
+    color: var(--text-accent);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.bio-stats ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.bio-stats li {
+    margin: 8px 0;
+    color: #bdc7d6;
+    font-size: 0.9rem;
+}
+
+.bio-stats i {
+    color: var(--text-accent);
+    margin-right: 8px;
+}
+
+/* 2. Right Text Column Styling */
+.bio-text {
+    flex: 2; /* Takes up 2 parts of space (wider) */
+}
+
+.bio-text h1 {
+    font-size: 2.5rem;
+    color: var(--text-accent);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.bio-text h3 {
+    color: var(--text-light);
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+
+.bio-text p {
+    color: #bdc7d6;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.signature {
+    margin-top: 40px;
+    font-style: italic;
+    border-left: 3px solid var(--text-accent);
+    padding-left: 20px;
+    color: var(--text-accent);
+}
+
+/* --- Mobile Responsiveness for Bio --- */
+/* If screen is small, stack them instead of side-by-side */
+@media (max-width: 768px) {
+    .bio-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bio-text {
+        text-align: center; /* Center text on mobile */
+    }
+    
+    .signature {
+        border-left: none;
+        border-top: 3px solid var(--text-accent);
+        padding-top: 10px;
+        padding-left: 0;
+    }
+}
+
+/* --- RESEARCH PAGE STYLES --- */
+
+.page-title {
+    color: var(--text-accent);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.research-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between cards */
+    max-width: 800px; /* Limits width so lines aren't too long to read */
+}
+
+/* The Card Container */
+.research-card {
+    background-color: rgba(255, 255, 255, 0.03); /* Very subtle transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-3px); /* Lifts slightly on hover */
+    border-color: var(--text-accent); /* Border turns Gold */
+}
+
+/* Header inside the card (Date/Publisher) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #bdc7d6;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.publisher {
+    font-weight: 700;
+    color: var(--text-accent);
+}
+
+/* Article Title */
+.research-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
+}
+
+.research-card h3 a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+.research-card h3 a:hover {
+    color: var(--text-accent);
+}
+
+/* Tag Pills */
+.tags {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(242, 201, 76, 0.1); /* Low opacity gold background */
+    color: var(--text-accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Description Text */
+.description {
+    color: #bdc7d6;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* 'Read Paper' Link */
+.read-more {
+    display: inline-block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--text-accent); /* Underline style */
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.read-more:hover {
+    color: var(--text-accent);
+    padding-bottom: 5px; /* Moves underline down slightly */
+}
+
+/* --- RESEARCH LAYOUT UPDATE --- */
+
+/* Split layout: Content left, Sidebar right */
+.research-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.research-main {
+    flex: 2; /* Main content takes 2/3 width */
+}
+
+.research-sidebar {
+    flex: 1; /* Sidebar takes 1/3 width */
+    position: sticky;
+    top: 100px; /* Sticks when you scroll */
+}
+
+/* Sidebar Box Styling */
+.sidebar-box {
+    background-color: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-box h3 {
+    color: var(--text-accent);
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Skill Bars */
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    font-size: 0.85rem;
+    color: #bdc7d6;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-bar .fill {
+    height: 100%;
+    background-color: var(--text-accent);
+    border-radius: 3px;
+}
+
+/* Talks List */
+.talks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.talks-list li {
+    margin-bottom: 15px;
+    border-left: 2px solid var(--text-accent);
+    padding-left: 10px;
+}
+
+.talks-list strong {
+    color: var(--text-light);
+    display: block;
+    font-size: 0.95rem;
+}
+
+.talk-detail {
+    font-size: 0.85rem;
+    color: #bdc7d6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .research-layout {
+        flex-direction: column;
+    }
+    
+    .research-sidebar {
+        position: static; /* Stop sticking on mobile */
+        width: 100%;
+    }
+}
+
+.talk-detail-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: #8b9bb4; /* Darker grey for secondary info */
+    margin-top: 4px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+
+/* --- HOBBIES PAGE STYLES --- */
+
+/* 1. Control Panel Buttons */
+.hobby-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--text-accent);
+    color: var(--bg-main);
+    border-color: var(--text-accent);
+}
+
+/* 2. Default Grid (Used for Chess, Anime, Movies) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Generic Hobby Card (Chess/Anime) */
+.hobby-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hobby-card h3 {
+    margin-top: 0;
+    color: var(--text-accent);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    color: #f1c40f; /* Star yellow */
+    font-weight: bold;
+}
+
+/* 3. IMPROVED PHOTOGRAPHY GRID */
+.gallery-grid.photo-mode {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.photo-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #000;
+    aspect-ratio: 1 / 1; /* Forces square Instagram-style tiles */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.photo-card:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+/* The "View Details" overlay */
+.hover-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.hover-overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0.3);
+}
+
+.photo-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* 4. MODAL (LIGHTBOX) STYLES */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Very dark backdrop */
+    z-index: 2000; /* High z-index to sit on top of everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--bg-secondary);
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Modal: Left Side (Image) */
+.modal-image-container {
+    flex: 1.5;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image-container img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+}
+
+/* Modal: Right Side (Info) */
+.modal-info {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h2 {
+    color: var(--text-accent);
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-meta {
+    margin-bottom: 20px;
+    color: #8b9bb4;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+}
+
+.modal-meta i {
+    color: var(--text-accent);
+    margin-right: 5px;
+}
+
+#modal-desc {
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 2001;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--text-accent);
+}
+
+/* Mobile Responsiveness for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+    .modal-image-container {
+        height: auto;
+        max-height: 50vh;
+    }
+    .modal-info {
+        padding: 20px;
+    }
+    .close-btn {
+        top: 10px;
+        right: 20px;
+    }
+}

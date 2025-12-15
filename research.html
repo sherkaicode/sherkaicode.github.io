@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/fav_img.png">
+    <title>Research | Wan's Web </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="research.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"> <img src="images/logo.png" alt="My Logo" style="height: 60px; vertical-align: middle;"> </div>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="bio.html" class="nav-link">Bio</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container research-layout">
+            
+            <section class="research-main">
+                <h1 class="page-title">Publications & Experiences</h1>
+                <p class="intro-blurb" style="text-align: center;">
+                    My work focuses on High Energy Physics (HEP) and Phenomenology, utilizing computational tools to simulate and analyze particle interactions.
+                    <br><br>
+                    <i class="fas fa-envelope" style="color: var(--text-accent);"></i> 
+                    <span style="margin-left: 5px;">Email me:</span> 
+                    <a href="mailto:francis.lance.jumawan@cern.ch" style="color: var(--text-accent); text-decoration: none; border-bottom: 1px dotted var(--text-accent);">
+                        francis.lance.jumawan@cern.ch
+                    </a>
+                </p>
+
+                <div class="research-grid">
+                    <article class="research-card">
+                        <div class="card-header">
+                            <span class="publisher">CERN Summer Student Program</span>
+                            <span class="date">Dec 2025</span>
+                        </div>
+                        <h3>
+                            <a href="https://repository.cern/records/j9wkh-y1x61" target="_blank">
+                                Probing the Higgs b-quark coupling (y<sub>b</sub>) at the ATLAS experiment
+                            </a>
+                        </h3>
+                        <div class="tags">
+                            <span class="tag">ATLAS Run 2/3</span>
+                            <span class="tag">Higgs Physics</span>
+                            <span class="tag">BDT</span>
+                        </div>
+                        <p class="description">
+                            This CERN Summer Student Program project focuses on probing the Higgs boson’s bottom Yukawa coupling (y<sub>b</sub>) through the associated production of a Higgs boson with two b-quarks (bbH). The bbH production cross section is approximately 0.5 pb at the LHC and have some destructive interference contributions from other Higgs production processes such as gluon-gluon Fusion (ggH) and Higgs Strahlung (VH). While the decay channel H→bb have the largest branching ratio, its precision is limited by the resolution. The decay channel for this search is H→γγ to avoid the resolution limitation since photon measurement in the ATLAS detector has a resolution of about 1-2%. In this feasibility study, Run 2 and Run 3 samples from the H→γγ analysis are used. The analysis utilizes kinematic selections, newly engineered discriminating variables, and boosted decision trees to enhance signal-background separation. Statistical sensitivity is assessed through binned significance and maximum-likelihood fits. The findings indicate limited sensitivity with the current samples, methods, and channel, highlighting the need for increased signal statistics, improved forward b-tagging, and advanced background separation.
+                        </p>
+                        <a href="https://repository.cern/records/j9wkh-y1x61" target="_blank" class="read-more">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                    </article>
+
+                    <article class="research-card">
+                        <div class="card-header">
+                            <span class="publisher">Samahang Pisika ng Pilipinas</span>
+                            <span class="date">Jun 2025</span>
+                        </div>
+                        <h3>
+                            <a href="https://proceedings.spp-online.org/article/view/SPP-2025-PB-19/" target="_blank">
+                                Non-resonant anomaly detection for semi-visible jets with leptonic decays
+                            </a>
+                        </h3>
+                        <div class="tags">
+                            <span class="tag">Hidden Valley</span>
+                            <span class="tag">Delphes</span>
+                            <span class="tag">MadGraph5</span>
+                        </div>
+                        <p class="description">
+                            In this study, we explore the capabilities of Non-Resonant Anomaly Detection techniques, Reweight and Generate, for identifying semi-visible jets (SVJ) within the Hidden Valley (HV) dark sector model. Using simulated events generated from PYTHIA, MadGraph5, and Delphes, we trained a Boosted Decision Tree (BDT) to select optimal features for distinguishing the signal from QCD backgrounds. With an AUC value of 0.998, the features selected are HT, MET, mjj, and N-subjettiness ratios (τ21 and τ32). Our results confirm that both Reweight and Generate provide reliable background extrapolation, as validated by Wasserstein distance metrics. Additionally, the Reweight method improves the detection significance from 2.6σ to approximately 5σ, demonstrating its potential for enhancing sensitivity in non-resonant searches.
+                        </p>
+                        <a href="https://proceedings.spp-online.org/article/view/SPP-2025-PB-19/" target="_blank" class="read-more">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="research-sidebar">
+                
+                <div class="sidebar-box">
+                    <h3>Conferences & Seminars</h3>
+                    <ul class="talks-list">
+                        <li>
+                            <strong>CERN@70: Recent Advances in Particle Physics</strong>
+                            <span class="talk-detail">Nov 2024 | National Institute of Phyisics, University of the Philippines Diliman</span>
+                            <span class="talk-detail-sub">Speaker: Andreas Hoecker (ATLAS Collaboration)</span>
+                        </li>
+                        <li>
+                            <strong>42nd SPP International Physics Conference</strong>
+                            <span class="talk-detail">July 2024 | Batangas State University</span>
+                        </li>
+                        <li>
+                            <strong>Black Hole Love Numbers & Scattering Amplitudes</strong>
+                            <span class="talk-detail">Dec 2024 |  National Institute of Phyisics, University of the Philippines Diliman</span>
+                            <span class="talk-detail-sub">Speaker: Dr. Mikhail Solon (UCLA)</span>
+                        </li>
+                        <li>
+                            <strong>Merger of Galaxy Clusters</strong>
+                            <span class="talk-detail">Oct 2024 |  National Institute of Phyisics, University of the Philippines Diliman</span>
+                            <span class="talk-detail-sub">Speaker: Dr. Rogério Monteiro-Oliveira (Academia Sinica)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Workshops & Training</h3>
+                    <ul class="talks-list">
+                        <li>
+                            <strong>ATLAS Analysis Software Tutorial</strong>
+                            <span class="talk-detail">Dec 2024 </span>
+                            <span class="talk-detail-sub">Comprehensive training on CERN's Ixplus environment and ROOT analysis tools[cite: 46, 47].</span>
+                        </li>
+                        <li>
+                            <strong>Particle Physics Masterclass</strong>
+                            <span class="talk-detail">June 2024 </span>
+                            <span class="talk-detail-sub">Led by Tiberiu Dragoiu (Romania).</span>
+                        </li>
+                        <li>
+                            <strong>Summer Virtual HSSP (MIT)</strong>
+                            <span class="talk-detail">July 2021</span>
+                            <span class="talk-detail-sub">Focused on the history and future trends of Nuclear Fusion technology[cite: 54, 55].</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 Francis Lance Jumawan</p>
+    </footer>
+
+</body>
+</html>
