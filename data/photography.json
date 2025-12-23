@@ -1,5 +1,13 @@
 [
     {
+        "id": 10,
+        "url": "images/a-walk-where-conrete-breathes.png",
+        "title": "A walk where conrete breathes",
+        "location": "Milan, Italy",
+        "description": "We went to Milan and enjoyed the architure present there",
+        "date_added": "2025-12-23"
+    },
+    {
         "id": 9,
         "url": "images/helios-set.png",
         "title": "Helios Set",
