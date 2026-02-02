@@ -1,5 +1,12 @@
 [
     {
+        "id": 5,
+        "title": "Morning Chess Sacrifice",
+        "date": "February 02, 2026",
+        "content": "I think chess.com is spamming brilliant analysis at this point. That move is obvious since it is a discovered attack. But, maybe there is a much deeper theoretical analysis that I did not see.",
+        "image_url": "images/chess-morning-chess-sacrifice.png"
+    },
+    {
         "id": 4,
         "title": "First time smothered mate!!",
         "date": "December 15, 2025",
