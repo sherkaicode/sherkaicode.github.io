@@ -1,5 +1,12 @@
 [
     {
+        "id": 6,
+        "title": "Brilliant!",
+        "date": "February 28, 2026",
+        "content": "This tactic is quite common though",
+        "image_url": "images/chess-brilliant.png"
+    },
+    {
         "id": 5,
         "title": "Morning Chess Sacrifice",
         "date": "February 02, 2026",
