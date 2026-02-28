@@ -1,5 +1,12 @@
 [
     {
+        "id": 7,
+        "title": "When opening just works",
+        "date": "February 28, 2026",
+        "content": "When my opening works, I love it",
+        "image_url": "images/chess-when-opening-just-works.png"
+    },
+    {
         "id": 6,
         "title": "Brilliant!",
         "date": "February 28, 2026",
