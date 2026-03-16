@@ -1,5 +1,12 @@
 [
     {
+        "id": 8,
+        "title": "smothered mate morning",
+        "date": "March 16, 2026",
+        "content": "Played a short game this morning and got the opportunity to play a smothered mate",
+        "image_url": "images/chess-smothered-mate-morning.png"
+    },
+    {
         "id": 7,
         "title": "When opening just works",
         "date": "February 28, 2026",
