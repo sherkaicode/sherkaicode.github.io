@@ -1,5 +1,12 @@
 [
     {
+        "id": 10,
+        "title": "Discovered Attack",
+        "date": "March 20, 2026",
+        "content": "The move before this is a blunder from the enemy. Glad I found the winning move",
+        "image_url": "images/chess-discovered-attack.png"
+    },
+    {
         "id": 9,
         "title": "Brilliant Sacrifice",
         "date": "March 19, 2026",
