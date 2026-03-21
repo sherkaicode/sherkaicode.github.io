@@ -1,5 +1,12 @@
 [
     {
+        "id": 11,
+        "title": "Brilliant move that I don't understand",
+        "date": "March 21, 2026",
+        "content": "I just played it to kick out the rook and do a back rank mate. I did not know that it has a much deeper positional advantage",
+        "image_url": "images/chess-brilliant-move-that-i-dont-understand.jpeg"
+    },
+    {
         "id": 10,
         "title": "Discovered Attack",
         "date": "March 20, 2026",
