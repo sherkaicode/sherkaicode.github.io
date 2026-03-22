@@ -1,5 +1,12 @@
 [
     {
+        "id": 12,
+        "title": "Simple Brilliant",
+        "date": "March 22, 2026",
+        "content": "Though this was a basic tactical move but chess.com is labelling it as birlliant. Maybe I missed some concept since the engine thinks it is amazing",
+        "image_url": "images/chess-simple-brilliant.png"
+    },
+    {
         "id": 11,
         "title": "Brilliant move that I don't understand",
         "date": "March 21, 2026",
