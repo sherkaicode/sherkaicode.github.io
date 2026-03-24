@@ -1,5 +1,12 @@
 [
     {
+        "id": 13,
+        "title": "Brilliant move",
+        "date": "March 24, 2026",
+        "content": "I did one but I was busy discussing so I lost the game",
+        "image_url": "images/chess-brilliant-move.png"
+    },
+    {
         "id": 12,
         "title": "Simple Brilliant",
         "date": "March 22, 2026",
