@@ -1,5 +1,12 @@
 [
     {
+        "id": 15,
+        "title": "Save the queen",
+        "date": "March 25, 2026",
+        "content": "I like this move since it is not that intuitive (I think)",
+        "image_url": "images/chess-save-the-queen.png"
+    },
+    {
         "id": 14,
         "title": "Queen Sack",
         "date": "March 24, 2026",
