@@ -1,5 +1,12 @@
 [
     {
+        "id": 19,
+        "title": "The ROOKK",
+        "date": "April 11, 2026",
+        "content": "Sacrifice the rook for checkmate",
+        "image_url": "images/chess-the-rookk.png"
+    },
+    {
         "id": 18,
         "title": "Bishop Sacrifice for mate",
         "date": "April 09, 2026",
