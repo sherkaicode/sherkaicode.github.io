@@ -1,5 +1,12 @@
 [
     {
+        "id": 20,
+        "title": "Not that brilliant",
+        "date": "April 15, 2026",
+        "content": "It is brilliant on the engine because the player rating level is low (~900)",
+        "image_url": "images/chess-not-that-brilliant.png"
+    },
+    {
         "id": 19,
         "title": "The ROOKK",
         "date": "April 11, 2026",
