@@ -1,5 +1,19 @@
 [
     {
+        "id": 24,
+        "title": "Knight Sacrifice",
+        "date": "May 22, 2026",
+        "content": "No thoughts :))",
+        "image_url": "images/chess-knight-sacrifice.png"
+    },
+    {
+        "id": 23,
+        "title": "Queen Sacrifice",
+        "date": "May 22, 2026",
+        "content": "No thoughts :))",
+        "image_url": "images/chess-queen-sacrifice.png"
+    },
+    {
         "id": 22,
         "title": "Sacrifice for the triple attack",
         "date": "April 24, 2026",
