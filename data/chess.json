@@ -1,5 +1,12 @@
 [
     {
+        "id": 25,
+        "title": "Discovered Attack",
+        "date": "July 09, 2026",
+        "content": "Date: July 09, 2026\nLocation: Krus na Ligas\nWeather: Cloudy (It rained yesterday)\nTime: 6:49 PM\nLog: Time to do research",
+        "image_url": "images/chess-discovered-attack.png"
+    },
+    {
         "id": 24,
         "title": "Knight Sacrifice",
         "date": "May 22, 2026",
