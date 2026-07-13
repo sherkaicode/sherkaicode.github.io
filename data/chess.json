@@ -1,5 +1,12 @@
 [
     {
+        "id": 26,
+        "title": "Queen Sack",
+        "date": "July 14, 2026",
+        "content": "Time: 7:00 AM\nLocation: Krus na Ligas\nWeather: Rainy\nTemperature: a bit cold",
+        "image_url": "images/chess-queen-sack.png"
+    },
+    {
         "id": 25,
         "title": "Discovered Attack",
         "date": "July 09, 2026",
